@@ -1,21 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace DataTypes
+namespace WinForm
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            int myNum = 5;               
-            double myDoubleNum = 5.99D;  
-            char myLetter = 'D';        
-            bool myBool = true;          
-            string myText = "Hello";    
-            Console.WriteLine(myNum);
-            Console.WriteLine(myDoubleNum);
-            Console.WriteLine(myLetter);
-            Console.WriteLine(myBool);
-            Console.WriteLine(myText);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
